@@ -2,7 +2,7 @@ import useStore from '../store/store';
 import useModalKeyboard from '../hooks/useModalKeyboard';
 import { useEffect, useRef, useState } from 'react';
 
-const EditTaskModal = ({ taskId , newTitle, onClose }) => {
+const EditTaskModal = ({ taskId , oldTitle, onClose }) => {
 
   const editTask = useStore((store) => store.editTask);
 
@@ -11,7 +11,7 @@ const EditTaskModal = ({ taskId , newTitle, onClose }) => {
       inputRef.current?.focus();
     }, []);
 
-  const [title, setTitle] = useState(newTitle);
+  const [title, setTitle] = useState(oldTitle);
 
   const handleEditTask = () => {
 
@@ -44,6 +44,7 @@ const EditTaskModal = ({ taskId , newTitle, onClose }) => {
           ref={inputRef}
           type="text"
           placeholder="Enter new title..."
+          value={oldTitle}
           className={`w-full rounded-lg border p-3 border-blue-300 outline-none focus:ring focus:ring-blue-500`}
         />
         <div className="mt-4 flex justify-end gap-2">

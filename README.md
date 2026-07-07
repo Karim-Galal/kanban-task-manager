@@ -1,19 +1,139 @@
-# React + Vite
+# Kanban Task Manager
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+React | Zustand | Tailwind | Vite
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tech Stack
 
-## React Compiler
+- React
+- Zustand
+- Tailwind CSS
+- Vite
+- Local Storage
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+A modern, responsive Kanban task management application built with React, Zustand, Tailwind CSS, and Vite.
 
-Note: This will impact Vite dev & build performances.
+The application allows users to create, edit, delete, organize, and persist tasks across multiple workflow stages using a clean drag-and-drop interface.
 
-## Expanding the ESLint configuration
+## Live Demo
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-"# kanban-task-manager" 
+Live demo: (https://kanban-task-manager-teal-psi.vercel.app/)
+
+## Features
+
+- Three-column Kanban workflow: Planned, Ongoing, and Done
+- Add tasks directly to a selected column
+- Edit existing task titles
+- Delete tasks with a confirmation modal
+- Drag and drop tasks between columns
+- Persist tasks in local storage with Zustand middleware
+- Keyboard support for modals:
+  - `Enter` submits the active modal action
+  - `Escape` closes the active modal
+- Responsive layout for desktop, tablet, and mobile screens
+- Column-specific colors and icons
+
+## Screenshots
+
+### Home
+
+![Home screen](docs/home.png)
+
+### Add Task Modal
+
+![Add task modal](docs/add-modal.png)
+
+### Add Task to Ongoing
+
+![Add task modal for ongoing column](docs/add-modal-to-ongoing.png)
+
+### Edit Task Modal
+
+![Edit task modal](docs/edit-modal.png)
+
+### Delete Task Modal
+
+![Delete task modal](docs/delete-modal.png)
+
+### Mobile View
+
+![Mobile view](docs/mobile-view.png)
+
+## Technologies Used
+
+- [React](https://react.dev/)
+- [Zustand](https://zustand-demo.pmnd.rs/)
+- [Vite](https://vite.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [React Icons](https://react-icons.github.io/react-icons/)
+- [UUID](https://www.npmjs.com/package/uuid)
+- [ESLint](https://eslint.org/)
+
+## Folder Structure
+
+```text
+zustand_kanban/
+src
+ ├── components
+ ├── modals
+ ├── hooks
+ ├── config
+ ├── store
+ └── App.jsx
+
+docs
+public
+
+## Installation
+
+Clone the repository and install dependencies:
+
+```bash
+git clone https://github.com/Karim-Galal/kanban-task-manager.git
+cd zustand_kanban
+npm install
+```
+
+## Usage
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Build the project for production:
+
+```bash
+npm run build
+```
+
+Preview the production build locally:
+
+```bash
+npm run preview
+```
+
+Run ESLint:
+
+```bash
+npm run lint
+```
+
+## Future Improvements
+
+- Add task descriptions, due dates, or priorities
+- Add task search and filtering
+- Support reordering tasks inside the same column
+- Add automated tests for store actions and modal behavior
+- Add a dark mode option
+
+## Why I Built This Project
+
+This project was built to practice global state management using Zustand, reusable React components, modal management, drag-and-drop interactions, and local persistence with middleware.
+
+
+
+## Acknowledgements
+
+This project was inspired by a Zustand learning tutorial and was expanded with additional features, UI improvements, reusable components, and project structure enhancements as part of my learning journey.

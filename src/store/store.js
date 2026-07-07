@@ -41,20 +41,19 @@ const store = (set) => ({
   })),
 
   tasks : [
-    { id: 1, title: 'Task 1', state: 'planned' }, 
-    { id: 2, title: 'Task 2', state: 'planned' }, 
-    { id: 3, title: 'Task 3', state: 'ongoing' },
-    { id: 4, title: 'Task 4', state: 'ongoing' },
-    { id: 5, title: 'Task 5', state: 'done' },
-    { id: 6, title: 'Task 6', state: 'done' },
-    { id: 7, title: 'Task 7', state: 'ongoing' },
+    { id: 1, title: "Plan the week", state: "planned" },
+    { id: 2, title: "Write meeting notes", state: "planned" },
+    { id: 3, title: "Update project files", state: "ongoing" },
+    { id: 4, title: "Reply to emails", state: "ongoing" },
+    { id: 5, title: "Finish daily report", state: "done" },
+    { id: 6, title: "Back up important files", state: "done" },
   ],
 
 
 })
 
 // const useStore = create( persist(store, {name: "kanban"}));
-const useStore = create( persist(store));
+const useStore = create( persist(store, {name: "kanban_tasks"}));
 
   
 

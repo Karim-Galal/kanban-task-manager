@@ -47,7 +47,7 @@ const Task = ({ task }) => {
       {openEditModal && (
         <EditTaskModal 
           taskId={task.id}
-          newTitle={task.title}
+          oldTitle={task.title}
           onClose={() => setOpenEditModal(false)}
         />
       
