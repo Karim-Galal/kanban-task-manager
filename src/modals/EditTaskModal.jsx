@@ -44,7 +44,7 @@ const EditTaskModal = ({ taskId , oldTitle, onClose }) => {
           ref={inputRef}
           type="text"
           placeholder="Enter new title..."
-          value={oldTitle}
+          value={title}
           className={`w-full rounded-lg border p-3 border-blue-300 outline-none focus:ring focus:ring-blue-500`}
         />
         <div className="mt-4 flex justify-end gap-2">
