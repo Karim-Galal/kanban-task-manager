@@ -37,7 +37,7 @@ const Task = ({ task }) => {
           <FaRegTrashAlt />
         </span>
       </div>
-
+      {}
       {openDeleteModal && (
         <DeleteTaskModal 
           taskId={task.id}

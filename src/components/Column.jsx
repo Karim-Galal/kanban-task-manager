@@ -73,7 +73,12 @@ export default function Column({ state }) {
           </div>
           
         ))}
-        
+
+        {tasks.length === 0 && (
+          <div className="text-gray-500 text-sm text-center pt-3 border-t-2 border-gray-200">
+            No tasks to show
+          </div>
+        )}
 
         {openInput && (
           <AddTaskModal 
