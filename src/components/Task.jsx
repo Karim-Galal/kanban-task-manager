@@ -20,8 +20,8 @@ const Task = ({ task }) => {
         setDraggedTask(task.id);
       }}
 
-      className="cursor-move rounded-lg border border-gray-200 bg-white p-4 shadow-sm transition hover:shadow-md flex items-center justify-between">
-      <h3 className="font-medium text-gray-800 break-all">
+      className="cursor-move rounded-lg border border-gray-200 bg-white p-4 shadow-sm transition hover:shadow-md flex items-start justify-between">
+      <h3 className="font-medium text-gray-800  word-break overflow-hidden">
         {task.title}
       </h3>
       <div className="flex items-center gap-2">
